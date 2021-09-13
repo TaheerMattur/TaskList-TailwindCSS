@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Task List</title>
+</head>
+<body class="px-2 py-6 bg-black font-sans">
+    <section class="h-100 w-full flex items-center justify-center font-sans">
+        <div class="container bg-blue-700 rounded shadow shadow-2xl my-10 w-full lg:w-10/12 lg:max-w-lg">
+            <section class="mb-4">
+                <!-- Heading Shadow Gradient-->
+                <div class="relative grid mb-5 justify-center">
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-green-500 to-purple-600 rounded-lg filter blur"></div>
+                    <button class="relative font-medium pointer-events-none text-3xl text-white px-4 py-3 m-4 bg-black rounded-lg flex justify-center items-center">
+                        <span class="flex items-center space-x-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="animate-pulse text-red-600 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                            <span class="pr-6 text-gray-100 text-indigo-500">TASK LIST</span>
+                        </span>
+                    </button>
+                </div>
+                <!-- Heading Shadow Gradient End-->
+
+                <form class="flex mt-4 p-8">
+                    <input type="text" class="todo-input shadow appearance-none border rounded w-full py-2 px-3 focus:outline-none focus:ring focus:border-blue-800 focus:text-red-600" placeholder="Enter the work to be done">
+                    <button type="sub" class="todo-button bg-black flex-no-shrink p-2 leading-none flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-blue-600 pointer-events-none h-7 w-7" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    
+                    <div class="select relative inline-block w-full text-gray-700 ml-10">
+                        <select name="todos" class="filter-todo select w-full h-10 pl-3 pr-6 text-base placeholder-gray-600 border rounded appearance-none focus:outline-none focus:ring focus:border-blue-800" placeholder="Regular input">
+                            <option value="all"> All</option>
+                            <option value="done">Done</option>
+                            <option value="undone">Undone</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce text-red-600 pointer-events-none h-7 w-7" viewBox="0 0 20 20" fill="red" stroke="red">
+                                <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            
+            <!-- ITEMS -->
+            <section class="pl-8">
+                <div class="flex mb-4 items-center">
+                    <ul class="todo-list"></ul>
+                </div>
+            </section>
+            <!-- ITEMS CLOSE -->
+        </div> 
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>

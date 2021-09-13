@@ -1,0 +1,114 @@
+* {
+	margin : 0;
+	padding : 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: url("./svg.png");
+}
+
+/* Targeting the newly created todo div */
+.todo {
+	margin: 0.5rem;
+	background: white;
+	font-size: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 0.5s ease;
+}
+
+.todo li {
+	flex: auto;
+	background-color: rgb(0, 19, 104);
+	color: white;
+	padding: 0.5rem;
+	border: 1px solid #fff;
+}
+
+.todo li {
+	flex: 1;
+}
+
+.trash-btn, .done-btn {
+	background: #fd0000;
+	color: white;
+	padding: 0.62rem;
+	cursor: pointer;
+	font-size: 0.8rem;
+	border: none;
+	outline: none;
+	border: 1px solid #fff;
+}
+
+.done-btn{
+	background:  rgb(7, 201, 0);
+}
+
+/* list Padding */
+.todo-item {
+	padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+	pointer-events: none;
+}
+
+.done {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+.fall {
+	animation: removed-item-animation 1.2s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+	transform-origin: 0% 100%;
+}
+
+@keyframes removed-item-animation {
+    0% {
+        opacity: 1;
+        transform: rotateZ(0);
+}
+ 
+    100% {
+        opacity: 0;
+        transform: translateY(600px) rotateZ(90deg);
+    }
+}	
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+	.todo-list {
+		min-width: 35%;
+	}
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+	.todo-list {
+		min-width: 40%;
+	}
+}
+
+@media (max-width: 604px) {
+	.todo-list {
+		min-width: 45%;
+		list-style: none;
+	}
+}
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+	.todo-list {
+		min-width: 60%;
+		list-style: none;
+	}
+
+	.filter-todo {
+	padding: 0.4rem;
+	font-size: 0.7rem;
+    }
+
+}
