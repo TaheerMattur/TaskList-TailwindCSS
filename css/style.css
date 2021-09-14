@@ -13,7 +13,7 @@ body {
 
 .header, .todo-button {
 	background: #B2FEFA;
-    background: linear-gradient(to right, #2e4dff, #00a8f7);
+    background: #026afc;
 }
 
 div.container {
@@ -34,7 +34,6 @@ div.container {
 
 .todo li {
 	flex: auto;
-	padding: 0.4rem;
 	box-shadow: rgba(155, 163, 170, 0.2) 0px 8px 24px;
 }
 
@@ -60,7 +59,7 @@ div.container {
 
 /* list Padding */
 .todo-item {
-	padding: 0rem 0.5rem;
+	padding: 0.3rem 0.8rem;
 }
 
 .fa-trash,
@@ -70,7 +69,7 @@ div.container {
 
 .done {
 	text-decoration: line-through;
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 .fall {
