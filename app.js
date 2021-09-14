@@ -59,6 +59,7 @@ function addTodo(event) {
     todoList.appendChild(todoDiv);
   }
 
+  
   function deleteTodo(event) {
     const item = event.target;
     //Delete Todo

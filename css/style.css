@@ -5,7 +5,19 @@
 }
 
 body {
-	background: url("./svg.png");
+	background: #00d2ff;
+	background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+	background: linear-gradient(to right, #3a7bd5, #00d2ff);
+	height: 100%;
+}
+
+.header, .todo-button {
+	background: #B2FEFA;
+    background: linear-gradient(to right, #2e4dff, #00a8f7);
+}
+
+div.container {
+	background: rgba(250, 250, 250, 0.8);
 }
 
 /* Targeting the newly created todo div */
@@ -17,33 +29,33 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	transition: all 0.5s ease;
+	border-radius: 4px;
 }
 
 .todo li {
 	flex: auto;
-	background-color: rgb(0, 19, 104);
-	color: white;
-	padding: 0.5rem;
-	border: 1px solid #fff;
+	padding: 0.4rem;
+	box-shadow: rgba(155, 163, 170, 0.2) 0px 8px 24px;
 }
 
 .todo li {
 	flex: 1;
+	
 }
 
 .trash-btn, .done-btn {
 	background: #fd0000;
 	color: white;
-	padding: 0.62rem;
+	padding: 0.6rem;
 	cursor: pointer;
 	font-size: 0.8rem;
 	border: none;
 	outline: none;
-	border: 1px solid #fff;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .done-btn{
-	background:  rgb(7, 201, 0);
+	background:  #02CE00;
 }
 
 /* list Padding */
@@ -58,7 +70,7 @@ body {
 
 .done {
 	text-decoration: line-through;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 
 .fall {
@@ -67,15 +79,15 @@ body {
 }
 
 @keyframes removed-item-animation {
-    0% {
-        opacity: 1;
-        transform: rotateZ(0);
-}
- 
-    100% {
-        opacity: 0;
-        transform: translateY(600px) rotateZ(90deg);
-    }
+	0% {
+		opacity: 1;
+		transform: rotateZ(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateY(600px) rotateZ(90deg);
+	}
 }	
 
 /********** Small devices only **********/
@@ -99,16 +111,16 @@ body {
 	}
 }
 
-/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+/********** Super extra small devices Only **********/
 @media (max-width: 479px) {
 	.todo-list {
 		min-width: 60%;
 		list-style: none;
 	}
-
+	
 	.filter-todo {
-	padding: 0.4rem;
-	font-size: 0.7rem;
-    }
-
+		padding: 0.4rem;
+		font-size: 0.7rem;
+	}
+	
 }
