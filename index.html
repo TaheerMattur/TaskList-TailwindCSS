@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Task List</title>
 </head>
-<body class="py-6 font-mono">
-    <section class="h-100 flex items-center justify-center font-sans">
-        <div class="container rounded-2xl shadow shadow-2xl my-10 w-full lg:max-w-lg">
+<body class="font-mono">
+    <section class="h-100 flex items-start justify-center font-sans">
+        <div class="container rounded-2xl shadow shadow-2xl my-10 w-3/4">
             <section class="mb-5">
                 <!-- Heading-->
                 <div class="header grid mb-5 justify-center rounded-b-3xl">
@@ -27,23 +27,23 @@
                 </div>
                 <!-- Heading End-->
                 
-                <form class="flex mt-4 p-8">
-                    <input type="text" class=" relative todo-input shadow appearance-none border rounded w-full py-2 px-3 focus:outline-none focus:ring focus:border-blue-800" placeholder="Enter the work to be done">
+                <form id="form" class="flex mt-4 p-8">
+                    <input type="text" class=" relative todo-input shadow appearance-none border rounded w-5/6 py-2 px-3 focus:outline-none focus:ring focus:border-blue-800" placeholder="Enter the work to be done">
                     <button type="sub" class="todo-button flex-no-shrink flex p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="#fff" stroke="transparent">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
                           </svg>
                     </button>
 
-                    <div class="select relative inline-block w-full ml-10">
-                        <select name="todos" class="filter-todo select w-full h-10 pl-3 pr-6 text-base placeholder-gray-600 border rounded appearance-none focus:outline-none focus:ring focus:border-blue-800" placeholder="Regular input">
+                    <div class="select relative inline-block ml-2">
+                        <select name="todos" class="filter-todo select w-auto h-11 pl-3 pr-8 text-base placeholder-gray-600 border rounded appearance-none focus:outline-none focus:ring focus:border-blue-800" placeholder="Regular input">
                             <option value="all"> All</option>
                             <option value="done">Done</option>
                             <option value="undone">Undone</option>
                         </select>
                         <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
                             <!-- Filter icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce text-red-600 pointer-events-none h-6 w-6" viewBox="0 0 20 20" fill="#026afc" stroke="transparent">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce ml-3 text-red-600 pointer-events-none h-5 w-5" viewBox="0 0 20 20" fill="#026afc" stroke="transparent">
                                 <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd" />
                             </svg>
                         </div>
@@ -52,9 +52,9 @@
             </section>
             
             <!-- ITEMS -->
-            <section class="pl-8">
-                <div class="flex mb-4 items-center">
-                    <ul class="todo-list"></ul>
+            <section id="items" class="px-12">
+                <div class="mb-4 items-center">
+                    <ul class="todo-list break-all"></ul>
                 </div>
             </section>
             <!-- ITEMS CLOSE -->

@@ -17,7 +17,6 @@ filterOption.addEventListener('click', filterTodo);
 function addTodo(event) {
     //Prevents Form from Submitting!
     event.preventDefault();
-
     //Create TODO DIV
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");

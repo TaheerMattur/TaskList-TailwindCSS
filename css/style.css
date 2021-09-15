@@ -30,31 +30,32 @@ div.container {
 	align-items: center;
 	transition: all 0.5s ease;
 	border-radius: 4px;
+	box-shadow: rgb(177, 177, 177) 0px 4px 8px;
 }
 
 .todo li {
 	flex: auto;
-	box-shadow: rgba(155, 163, 170, 0.2) 0px 8px 24px;
+}
+
+.todo:hover {
+	transform: scale(1.1);
 }
 
 .todo li {
-	flex: 1;
-	
+	flex: 1;	
 }
 
 .trash-btn, .done-btn {
-	background: #fd0000;
-	color: white;
-	padding: 0.6rem;
+	color: #fd0000;
+	padding: 0.42rem;
 	cursor: pointer;
-	font-size: 0.8rem;
+	font-size: 0.7rem;
 	border: none;
 	outline: none;
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .done-btn{
-	background:  #02CE00;
+	color: #02CE00;
 }
 
 /* list Padding */
@@ -73,7 +74,7 @@ div.container {
 }
 
 .fall {
-	animation: removed-item-animation 1.2s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+	animation: removed-item-animation 0.8s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
 	transform-origin: 0% 100%;
 }
 
@@ -112,14 +113,33 @@ div.container {
 
 /********** Super extra small devices Only **********/
 @media (max-width: 479px) {
+	
+	html,
+	body {
+		background: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	div.container {
+		width: 100%;
+		margin: 0;
+		height: 100vh;
+	}
+
 	.todo-list {
 		min-width: 60%;
 		list-style: none;
 	}
 	
 	.filter-todo {
-		padding: 0.4rem;
-		font-size: 0.7rem;
+		padding: 0.3rem;
+		font-size: 0.8rem;
+		width: 5rem;
 	}
 	
+	#form, #items {
+		width: 100%;
+		padding: 0.8rem;
+	}
 }
