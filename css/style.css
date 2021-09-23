@@ -69,41 +69,30 @@ div.container {
 }
 
 .fall {
-	animation: removed-item-animation 0.8s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
-	transform-origin: 0% 100%;
+	animation: removed-item-animation 0.5s linear;
+    transform-origin: 390px 100%;
 }
 
 @keyframes removed-item-animation {
-	0% {
-		opacity: 1;
-		transform: rotateZ(0);
-	}
-	
-	100% {
-		opacity: 0;
-		transform: translateY(600px) rotateZ(90deg);
-	}
-}	
-
-/********** Small devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
-	.todo-list {
-		min-width: 35%;
-	}
-}
-
-/********** Extra small devices only **********/
-@media (max-width: 767px) {
-	.todo-list {
-		min-width: 40%;
-	}
-}
-
-@media (max-width: 604px) {
-	.todo-list {
-		min-width: 45%;
-		list-style: none;
-	}
+    0% {
+        opacity: 1;
+        transform: translateX(0) rotateZ(0);
+    }
+ 
+    50% {
+        opacity: 1;
+        transform: translateX(-400px) rotateZ(0);
+    }
+ 
+    75% {
+        opacity: 1;
+        transform: translateX(-420px) rotateZ(-30deg);
+    }
+ 
+    100% {
+        opacity: 0;
+        transform: translateX(-800px) rotateZ(-60deg)  translateY(400px);
+    }
 }
 
 /********** Super extra small devices Only **********/

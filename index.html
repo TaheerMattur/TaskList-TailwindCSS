@@ -16,7 +16,7 @@
                 <div class="header grid mb-5 justify-center rounded-b-3xl">
                     <button class="font-medium pointer-events-none text-3xl text-white px-4 py-3 mt-4 rounded-lg flex justify-center items-center">
                         <span class="flex items-center space-x-5">
-                            <!--Bell -->
+                            <!--Timer -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="animate-pulse h- w-8" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
                             </svg>
@@ -27,6 +27,7 @@
                 </div>
                 <!-- Heading End-->
                 
+                <!-- Form Input Section -->
                 <form id="form" class="flex mt-4 p-8">
                     <input type="text" class=" relative todo-input shadow appearance-none border rounded w-5/6 py-2 px-3 focus:outline-none focus:ring focus:border-blue-800" placeholder="Enter the work to be done">
                     <button type="sub" class="todo-button flex-no-shrink flex p-2">
@@ -50,15 +51,16 @@
                     </div>
                 </form>
             </section>
-            
-            <!-- ITEMS -->
+            <!-- Form Input Section Close -->
+
+            <!-- Items -->
             <section id="items" class="px-12 mb-10">
                 <div class="mb-4 items-center">
                     <ul class="todo-list break-all"></ul>
                 </div>
             </section>
-            <!-- ITEMS CLOSE -->
-        </div> 
+            <!-- Items Close -->
+        </div>
     </section>
     <script src="app.js"></script>
 </body>
