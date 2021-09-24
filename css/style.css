@@ -95,6 +95,25 @@ div.container {
     }
 }
 
+.fade {
+	animation: edited-item-animation .6s cubic-bezier(.55,-0.04,.91,.94) forwards;
+	transform-origin: 390px 100%;
+}
+ 
+@keyframes edited-item-animation {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+ 
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+
+
 /********** Super extra small devices Only **********/
 @media (max-width: 479px) {
 	
